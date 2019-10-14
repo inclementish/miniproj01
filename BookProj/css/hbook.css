@@ -89,14 +89,14 @@
 	}
 
 .buildings {
- 	background-image: url(../imgs/TracingSoT-01.svg);
+ 	background-image: url(../imgs/sot01.svg);
  	width: 460px;
 	height: 655px;
 	position: absolute;
 }
 
 .gloworb {
- 	background-image: url(../imgs/TracingSoT-02-01.svg);
+ 	background-image: url(../imgs/sot02.svg);
  	width: 455px;
 	height: 655px;
 	margin-top: 5px;
@@ -104,7 +104,7 @@
 }
 
 .trees {
- 	background-image: url(../imgs/TracingSoT-03-01.svg);
+ 	background-image: url(../imgs/sot-03.svg);
  	width: 455px;
 	height: 655px;
 	position: absolute;
