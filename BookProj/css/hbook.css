@@ -1,0 +1,230 @@
+@font-face {
+	font-family: FGBook;
+	src: url(..fonts/ITCFranklinGothicStd-Book_0.otf) format('.otf');
+}
+
+@font-face {
+	font-family: FGMed;
+	src: url(..fonts/ITCFranklinGothicStd-Med_0.otf) format('.otf');
+}
+
+.background {
+	width: 455px;
+	height: 585px;
+	margin: 0;
+		margin-right: -50%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	position: absolute;
+	background-image: linear-gradient(#000000, #442515, #442515, #442515, #442515, #442515);
+	overflow: hidden;
+}
+
+.star {
+	width: 5px;
+	height: 5px;
+	transform: rotate(45deg);
+	background-color: #EEBA46;
+	margin-left: 125px;
+	margin-top: 125px;
+	position: absolute;
+}
+
+	.starglow {
+		width: 10px;
+		height: 10px;
+		border-radius: 100%;
+		filter: blur(2px);
+		background-color: #EEBA46;
+		margin-left: 122px;
+		margin-top: 122px;
+		position: absolute;
+		transition: filter 2s;
+	}
+
+	.starglow:hover {
+		transition: filter 2s;
+		filter: blur(8px);
+		cursor: default;
+	}
+
+.sfcircle {
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	background-color: yellow;
+	margin-top: 25px;
+	margin-left: 15px;
+	position: absolute;
+}
+
+.baseblock {
+	width: 600px;
+	height: 40px;
+	transform: rotate(-21deg);
+	margin-top: 450px;
+	margin-left: -50px;
+	background-color: #87421E;
+	position: absolute;
+}
+
+.saturnrings {
+	width: 600px;
+	height: 125px;
+	transform: rotate(-86deg);
+	margin-top: 100px;
+	margin-left: 30px;
+	background-image: linear-gradient(#cb812a, #87421E, #442515, #87421e, #cb812a, #87421e, #87421e, #442515);
+	position: absolute;
+	animation: ringslide linear infinite .45s;
+}
+
+	@keyframes ringslide {
+		0% { background-image: linear-gradient(#cb812a, #87421E, #442515, #87421e, #cb812a, #87421e, #87421e, #442515); }
+		25% { background-image: linear-gradient(#87421E, #442515, #87421e, #cb812a, #87421e, #87421e, #442515, #cb812a); }
+		50% { background-image: linear-gradient(#442515, #87421e, #cb812a, #87421e, #87421e, #442515, #cb812a, #87421E); }
+		75% { background-image: linear-gradient(#87421e, #cb812a, #87421e, #87421e, #442515, #cb812a, #87421E, #442515); }
+		100% { background-image: linear-gradient(#cb812a, #87421e, #87421e, #442515, #cb812a, #87421E, #442515, #87421e); }
+	}
+
+.buildings {
+ 	background-image: url(../imgs/TracingSoT-01.svg);
+ 	width: 460px;
+	height: 655px;
+	position: absolute;
+}
+
+.gloworb {
+ 	background-image: url(../imgs/TracingSoT-02-01.svg);
+ 	width: 455px;
+	height: 655px;
+	margin-top: 5px;
+	position: absolute;
+}
+
+.trees {
+ 	background-image: url(../imgs/TracingSoT-03-01.svg);
+ 	width: 455px;
+	height: 655px;
+	position: absolute;
+}
+
+.saturncircle {
+	width: 800px;
+	height: 800px;
+	border-radius: 100%;
+	background-image: linear-gradient(#cb812a, #dda627, yellow, #dda627, #cb812a, orange, #87421E, #442515, #87421E, orange, #87421E, #442515, #442515, #442515, #87421e, #cb812a, #87421e, #87421e, #442515);
+	transform: rotate(-85deg);
+	margin-top: 80px;
+	margin-left: -5px;
+	position: absolute;
+}
+
+.ground {
+	width: 600px;
+	height: 500px;
+	transform: rotate(-21deg);
+	margin-top: 450px;
+	background-color: #cb812a;
+	position: absolute;
+}
+
+.kurt {
+	font-size: 37px;
+	font-weight: bold;
+	font-family: FGMed;
+	color: #d9b2ff;
+	position: absolute;
+	letter-spacing: .02em;
+	margin-left: 100px;
+	margin-top: -100px;
+	animation-delay: 2s;
+	animation: sidleinkurt 1s ease forwards;
+}
+
+	@keyframes sidleinkurt{
+		0% { margin-top: -100px; }
+		100% { margin-top: 40px; }
+	}
+
+.sirens {
+	font-size: 28px;
+	font-family: FGBook;
+	color: white;
+	letter-spacing: .03em;
+	position: absolute;
+	margin-left: 180px;
+	margin-top: 40px;
+	animation: sidleinsirens 1s ease forwards;
+	animation-delay: 1s;
+	opacity: 0;
+}
+
+	@keyframes sidleinsirens{
+		0% { margin-top: 40px; opacity: 0;}
+		100% { margin-top: 85px; opacity: 1;}
+	}
+
+.quote {
+	width: 150px;
+	height: 200px;
+	font-family: FGBook;
+	font-size: 11px;
+	color: white;
+	letter-spacing: .03em;
+	position: absolute;
+	margin-left: 275px;
+	margin-top: 520px;
+	opacity: 0;
+}
+
+	.author {
+		font-size: 9px;
+		font-family: FGBook;
+	}
+
+		.quote {
+			animation: fadein linear 3s;
+			animation-delay: 2s;
+			animation-fill-mode: forwards;
+		}
+
+			@keyframes fadein {
+				0% {opacity: 0; filter: blur(5px);}
+				100% {opacity: 1; filter: blur(0px);}
+			}
+
+
+.sf {
+	font-size: 30px;
+	font-family: FGMed;
+	font-weight: bolder;
+	color: #442515;
+	letter-spacing: .03em;
+	position: absolute;
+	margin-left: 20px;
+	margin-top: 30px;
+	transform: rotate(90deg);
+}
+
+.master {
+	font-size: 30px;
+	font-family: FGMed;
+	font-weight: bolder;
+	color: yellow;
+	letter-spacing: .1em;
+	position: absolute;
+	margin-left: -150px;
+	margin-top: 205px;
+	transform: rotate(90deg);
+	animation: sidleinmaster ease .75s forwards;
+	animation-delay: 2.5s;
+}
+
+	@keyframes sidleinmaster{
+		0% { margin-left: -150px; }
+		100% { margin-left: -95px; }
+	}
+
+
